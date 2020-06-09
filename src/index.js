@@ -2,13 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'tachyons';
-// import App from './App';
+import App from './App';
 import Dropdown from './Dropdown.js';
 import * as serviceWorker from './serviceWorker';
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
+
 
 ReactDOM.render(
   <React.StrictMode>
     <Dropdown />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

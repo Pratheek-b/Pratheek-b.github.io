@@ -1,14 +1,10 @@
 import React from 'react';
-//import { Button, Nav, Navbar, NavDropdown, Form, FormControl } from 'bootstrap';
-//import './Hello.css';
-// import React, { component } from 'react';
-
 
 const Dropdown = () => {
   return (
   //  <h1> Hello World </h1>
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
-    <a className="navbar-brand" href="public/index.html">Navbar</a>
+    <a className="navbar-brand" href="public/index.html">MarketWatch</a>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -18,22 +14,22 @@ const Dropdown = () => {
         <li className="nav-item active">
           <a className="nav-link" href="public/index.html">Home <span className="sr-only">(current)</span></a>
         </li>
-        <li className="nav-item">
+        <li className="nav-item active">
           <a className="nav-link" href="public/index.html">Link</a>
         </li>
-        <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="public/index.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li className="nav-item dropdown active">
+          <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Dropdown
           </a>
-          <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a className="dropdown-item" href="public/index.html">Action</a>
-            <a className="dropdown-item" href="public/index.html">Another action</a>
+          <div className="dropdown-menu active" aria-labelledby="navbarDropdown">
+            <a className="dropdown-item active" href="public/index.html">Action</a>
+            <a className="dropdown-item active" href="public/index.html">Another action</a>
             <div className="dropdown-divider"></div>
-            <a className="dropdown-item" href="public/index.html">Something else here</a>
+            <a className="dropdown-item active" href="public/index.html">Something else here</a>
           </div>
         </li>
         <li className="nav-item">
-          <a className="nav-link disabled" href="public/index.html" tabindex="-1" aria-disabled="true">Disabled</a>
+          <a className="nav-link active" href="public/index.html" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
       <form className="form-inline my-2 my-lg-0">
