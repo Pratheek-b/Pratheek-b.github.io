@@ -1,6 +1,6 @@
 import React from 'react';
 import {Navbar, NavDropdown, Nav, FormControl, Form, Button} from 'react-bootstrap';
-function Dropdown () {
+function Dropdown ({searchfield,onSearch}) {
 
   return (
     <Navbar bg="light" expand="lg">
@@ -19,7 +19,7 @@ function Dropdown () {
       </NavDropdown>
     </Nav>
     <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+      <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange = {onSearch}/>
       <Button variant="outline-success">Search</Button>
     </Form>
   </Navbar.Collapse>

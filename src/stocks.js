@@ -28,5 +28,15 @@ export const stocks = [
     high:'2,626.43',
     low:'2,525.00',
     mkt_cap:'1.30T'
+  },
+  {
+    id : 4,
+    name:'Apple Inc',
+    st_symbol:'AAPL',
+    market:'NASDAQ',
+    open:'347.90',
+    high:'354.77',
+    low:'346.09',
+    mkt_cap:'1.53T'
   }
 ]
