@@ -15,6 +15,11 @@ class App extends Component {
       searchField: ''
     }
   }
+
+  // componentDidMount() {
+  //   console.log('check');
+  // }
+
   render() {
     const filteredList = this.state.stocks.filter(stock => {
         return stock.name.toLowerCase().includes(this.state.searchField);
