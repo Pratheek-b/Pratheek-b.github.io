@@ -34,20 +34,20 @@ class Stocklist extends Component {
 
 
     }
-      const stockCard = stocks.map(async(user, i) => {
-        var stock_data = await fetchStock(stocks[i].name, stocks[i].st_symbol, i);
-        console.log(stock_data);
-        // let tsd = data['Time Series (Daily)'];
-        // return (tsd && tsd["2020-01-2"]);
-        // let open_val = stock_data["1. open"];
-        // let high_val = stock_data["2. high"];
-        // let low_val = stock_data["3. low"];
-        // let close_val = stock_data["4. close"];
-        // return <Card name={stocks[i].name} key={stocks[i].st_symbol} open={open_val} high={high_val} low={low_val} close={close_val} />
-      })
-      return (
-        stockCard
-      );
+    const stockCard = stocks.map(async (user, i) => {
+      var stock_data = await fetchStock(stocks[i].name, stocks[i].st_symbol, i);
+      console.log(stock_data);
+      // let tsd = data['Time Series (Daily)'];
+      // return (tsd && tsd["2020-01-2"]);
+      // let open_val = stock_data["1. open"];
+      // let high_val = stock_data["2. high"];
+      // let low_val = stock_data["3. low"];
+      // let close_val = stock_data["4. close"];
+      // return <Card name={stocks[i].name} key={stocks[i].st_symbol} open={open_val} high={high_val} low={low_val} close={close_val} />
+    })
+    return (
+      stockCard
+    );
   }
 }
 export default Stocklist;
