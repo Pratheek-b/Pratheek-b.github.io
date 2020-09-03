@@ -15,10 +15,11 @@ class Stocklist extends Component {
   }
 
   componentDidMount() {
-    this.demofunc()
+
   }
 
-  demofunc = async () => {
+
+  render() {
     var yahooFinance = require('yahoo-finance');
     const fetchStock = (st_symbol) => {
       return yahooFinance.quote({
@@ -35,12 +36,8 @@ class Stocklist extends Component {
         });
     }
 
-    // const stockCard = stocks.map(async(user, i) => {
-    const stockCard = [];
-     for(let i=0;i<stocks.length;i++) {
-    // const stockCard = []
-    // stocks.forEach(async (user, i) => {
-      var stock_data = await fetchStock(stocks[i].st_symbol);
+    const stockCard = stocks.map(async (user, i) => {
+      var stock_data = await fetchStock(stocks[i].st_symbol)
       //        .then(response => {
       // console.log(response);
       // console.log(stock_data);
@@ -49,21 +46,11 @@ class Stocklist extends Component {
       let high_val = stock_data.price.regularMarketDayHigh;
       let low_val = stock_data.price.regularMarketDayLow;
       let close_val = stock_data.price.regularMarketPreviousClose;
-      stockCard.push(<Card name={stocks[i].name} key={stocks[i].st_symbol} open={open_val} high={high_val} low={low_val} close={close_val} />);
-    };
-    console.log('bro');
-    this.setState({
-      Posts: stockCard
-    });
-  }
+      return <Card name={stocks[i].name} key={stocks[i].st_symbol} open={open_val} high={high_val} low={low_val} close={close_val} />
 
-  render() {
-
-    // })
+    })
     return (
-      <div>
-        {this.state.Posts}
-      </div>
+      stockCard
     );
   }
 }
