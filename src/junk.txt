@@ -1,0 +1,33 @@
+// .then(data => {
+  // console.log(data);
+  // return data;
+  // let tempEntry = {};
+  // var retArr = [];
+  // const tSeries = (tempData) => {
+  //   for(var dataEl in tempData){
+  //     retArr.push([tempData[dataEl]][0]);
+  //     // var tempEntry = {[tSeries[tempData]][0]};
+  //     break;
+  //   }
+  // return retArr;
+  // }
+  // }
+  // return (data['Time Series (Daily)']);
+  // console.log(outArr);
+  // return outArr;
+
+// console.log(tsd);
+// let date_key =  tsd[Object.keys(tsd)[0]];
+
+
+
+// console.log(date_key[Object.keys(date_key)[0]]);
+//
+// )
+// }
+// )
+
+// const getNestedObject = (nestedObj, pathArr) => {
+//   return pathArr.reduce((obj, key) =>
+//       (obj && obj[key] !== 'undefined') ? obj[key] : undefined, nestedObj);
+// }

@@ -36,17 +36,38 @@ class Stocklist extends Component {
       }
 
        const stockCard = stocks.map(async(user, i) => {
-         var stock_data = await fetchStock(stocks[i].st_symbol)
+         var stock_data = await fetchStock('MSFT')
   //        .then(response => {
              // console.log(response);
              // console.log(stock_data);
-             console.log(stock_data.price.regularMarketOpen);
+
              let open_val = stock_data.price.regularMarketOpen;
              let high_val = stock_data.price.regularMarketDayHigh;
              let low_val = stock_data.price.regularMarketDayLow;
              let close_val = stock_data.price.regularMarketPreviousClose;
+             // // console.log(ret_obj);
+             // return ret_obj;
              return <Card name={stocks[i].name} key={stocks[i].st_symbol} open={open_val} high={high_val} low={low_val} close={close_val} />
+  //           return response})
+  //        .then(data =>{
+            // console.log(stock_data);
+            // console.log(stock_data.price.regularMarketOpen);
+            // let open_val = data.price.regularMarketOpen ;
+            // let high_val = data.price.regularMarketDayHigh ;
+            // let low_val = data.price.regularMarketDayLow;
+            // let close_val = data.price.regularMarketPreviousClose;
 
+            // return <Card name={stocks[i].name} key={stocks[i].st_symbol} open={open_val} high={high_val} low={low_val} close={close_val} />
+            // const resp_obj = data;
+    //          return data});
+            // console.log(stock_data);
+            // console.log(stock_data.price.regularMarketOpen);
+            // let open_val = stock_data.price.regularMarketOpen ;
+            // let high_val = stock_data.price.regularMarketDayHigh ;
+            // let low_val = stock_data.price.regularMarketDayLow;
+            // let close_val = stock_data.price.regularMarketPreviousClose;
+        // return <Card name={stocks[i].name} key={stocks[i].st_symbol} open={open_val} high={high_val} low={low_val} close={close_val} />
+        // return stock_data
       })
       return (
         stockCard
