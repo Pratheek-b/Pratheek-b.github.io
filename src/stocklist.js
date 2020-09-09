@@ -44,21 +44,23 @@ class Stocklist extends Component {
       //        .then(response => {
       // console.log(response);
       // console.log(stock_data);
-      console.log(stock_data.price.regularMarketOpen);
+      // console.log(stock_data.price);
       let open_val = stock_data.price.regularMarketOpen;
       let high_val = stock_data.price.regularMarketDayHigh;
       let low_val = stock_data.price.regularMarketDayLow;
       let close_val = stock_data.price.regularMarketPreviousClose;
-      stockCard.push(<Card name={stocks[i].name} key={stocks[i].st_symbol} open={open_val} high={high_val} low={low_val} close={close_val} />);
+      let mkt_cap = (stock_data.price.marketCap)/1000000000;
+      let currency = stock_data.price.currency;
+      stockCard.push(<Card name={stocks[i].name} key={stocks[i].st_symbol} open={open_val} high={high_val} low={low_val} close={close_val} mkt_cap={mkt_cap} currency={currency} st_symbol={stocks[i].st_symbol} />);
     };
-    console.log('bro');
+    // console.log('bro');
     this.setState({
       Posts: stockCard
     });
   }
 
   render() {
-
+    
     // })
     return (
       <div>
