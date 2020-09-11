@@ -1,15 +1,15 @@
 export const stocks = [
   {
     id: 1,
-    name: 'Microsoft Corporation',
+    name: 'miscrosft',
     st_symbol: 'MSFT',
-    market: 'NASDAQ',
+    market: 'NASDAQ'
   },
   {
     id: 2,
     name: 'Alphabet Inc',
     st_symbol: 'GOOG',
-    market: 'NASDAQ',
+    market: 'NASDAQ'
   },
   {
     id: 3,
@@ -22,11 +22,10 @@ export const stocks = [
     name: 'Apple Inc',
     st_symbol: 'AAPL',
     market: 'NASDAQ',
+  },
+  {
+    id: 5,
+    name: 'Tesla Motors',
+    st_symbol: 'TSLA'
   }
-  // ,
-  // {
-  //   id: 5,
-  //   name: 'Fortinet',
-  //   st_symbol: 'FTNT'
-  // }
 ]
