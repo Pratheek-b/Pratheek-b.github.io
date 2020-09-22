@@ -15,7 +15,7 @@ class Stocklist extends Component {
   }
 
   componentDidMount() {
-    this.demofunc()
+    // this.demofunc()
   }
 
   demofunc = async () => {
@@ -61,6 +61,8 @@ class Stocklist extends Component {
   }
 
   render() {
+    
+    this.demofunc()
     
     // })
     return (

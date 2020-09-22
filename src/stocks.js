@@ -27,5 +27,15 @@ export const stocks = [
     id: 5,
     name: 'Tesla Motors',
     st_symbol: 'TSLA'
+  },
+  {
+    id: 6,
+    name: 'Fortinet',
+    st_symbol: 'FTNT'
+  },
+  {
+    id: 7,
+    name: 'Netflix',
+    st_symbol : 'NFLX'
   }
 ]

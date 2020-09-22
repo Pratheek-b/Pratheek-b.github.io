@@ -22,7 +22,7 @@ class App extends Component {
 
   render() {
     const filteredList = this.state.stocks.filter(stock => {
-        return stock.name.toLowerCase().includes(this.state.searchField);
+        return stock.st_symbol.toLowerCase().includes(this.state.searchField);
       })
 
     return (
