@@ -1,10 +1,8 @@
-import React, {
-  Component
-} from 'react';
+import React, {Component} from 'react';
 import Card from './Card.js'
-import {
-  stocks
-} from "./stocks.js"
+import {stocks} from "./stocks.js"
+import fetchQuote from "./stockQuote.js"
+
 
 class Stocklist extends Component {
   constructor() {
@@ -15,32 +13,16 @@ class Stocklist extends Component {
   }
 
   componentDidMount() {
-    // this.demofunc()
+    this.demofunc()
   }
 
   demofunc = async () => {
-    var yahooFinance = require('yahoo-finance');
-    const fetchStock = (st_symbol) => {
-      return yahooFinance.quote({
-        symbol: st_symbol,
-        modules: ['price', 'summaryDetail'] // see the docs for the full list
-      }, function (err, quotes) {
-        // console.log(quotes);
-        return (quotes);
-      })
-        .then(response => { return response })
-        .then(data => {
-          // console.log(data);
-          return data
-        });
-    }
-
     // const stockCard = stocks.map(async(user, i) => {
     const stockCard = [];
      for(let i=0;i<stocks.length;i++) {
     // const stockCard = []
     // stocks.forEach(async (user, i) => {
-      var stock_data = await fetchStock(stocks[i].st_symbol);
+      var stock_data = await fetchQuote(stocks[i].st_symbol);
       //        .then(response => {
       // console.log(response);
       // console.log(stock_data);
@@ -62,7 +44,7 @@ class Stocklist extends Component {
 
   render() {
     
-    this.demofunc()
+    // this.demofunc()
     
     // })
     return (
